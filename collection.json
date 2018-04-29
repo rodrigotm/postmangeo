@@ -1,1 +1,411 @@
-{"id":"b3e34531-9c02-8777-df5a-47ebdf6716c6","name":"GeoAll","description":"","order":["361ad284-51e8-512d-8991-0390c14bdafe","482c9f49-1405-221c-60a7-14bf4d4ead6a","fbc8a8d4-a23b-2c0e-89a2-1c57df392290","085e6152-5a07-792d-9901-b5fe4f1fe78f","9d449671-ea1f-9812-15a0-c4a731ee940c","6e2ad341-5e3b-2694-30cd-2ddfab3a1e6f","155ab00e-77d3-1ec3-cf31-05d06dee5885","879ec714-4c83-78b0-3f4c-a6505f21a130"],"folders":[],"folders_order":[],"timestamp":0,"owner":"394389","public":false,"events":[],"variables":[],"auth":null,"requests":[{"id":"085e6152-5a07-792d-9901-b5fe4f1fe78f","headers":"X-AUTH-TOKEN: 726144e0-ecee-40e3-8d32-ca12563bb6f2\n\/\/Content-Type: application\/json\n","headerData":[{"key":"X-AUTH-TOKEN","value":"726144e0-ecee-40e3-8d32-ca12563bb6f2","description":"","enabled":true},{"key":"Content-Type","value":"application\/json","description":"","enabled":false}],"url":"{{API_URL_VM2}}\/pessoas\/7\/files\/upload","folder":null,"queryParams":[],"events":[],"pathVariables":[],"pathVariableData":[],"method":"POST","data":[{"key":"file","type":"file","enabled":true,"value":"boleto.pdf"}],"dataMode":"params","auth":null,"time":1525012422016,"name":"Pessoa - Upload file","description":"","collectionId":"b3e34531-9c02-8777-df5a-47ebdf6716c6","responses":[],"currentHelper":null,"helperAttributes":null},{"id":"155ab00e-77d3-1ec3-cf31-05d06dee5885","headers":"Content-Type: application\/json\nX-AUTH-TOKEN: abc123\n","headerData":[{"key":"Content-Type","value":"application\/json","description":"","enabled":true},{"key":"X-AUTH-TOKEN","value":"abc123","description":"","enabled":true}],"url":"{{API_URL_VM2}}\/pessoas\/8","queryParams":[],"events":[],"pathVariables":[],"pathVariableData":[],"method":"GET","data":[],"dataMode":"raw","version":2,"auth":null,"time":1525017193985,"name":"Retrieve Pessoa ( id) ","description":"","collectionId":"b3e34531-9c02-8777-df5a-47ebdf6716c6","responses":[],"currentHelper":null,"helperAttributes":null,"rawModeData":"{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"},{"id":"361ad284-51e8-512d-8991-0390c14bdafe","headers":"X-AUTH-TOKEN: 726144e0-ecee-40e3-8d32-ca12563bb6f2\nContent-Type: application\/json\n","headerData":[{"key":"X-AUTH-TOKEN","value":"726144e0-ecee-40e3-8d32-ca12563bb6f2","description":"","enabled":true},{"key":"Content-Type","value":"application\/json","description":"","enabled":true}],"url":"{{API_URL_VM2}}\/pessoas","folder":null,"queryParams":[],"events":[],"pathVariables":[],"pathVariableData":[],"method":"POST","data":[],"dataMode":"raw","auth":null,"time":1525003558970,"name":"Save pessoa","description":"","collectionId":"b3e34531-9c02-8777-df5a-47ebdf6716c6","currentHelper":null,"helperAttributes":null,"rawModeData":"{\n \"nome\": \"Rodrigo Teixeira\",\n \"cpf\":\"12345678909\",\n \"estado\": \"sc\",\n \"cidade\": \"Turvo\",\n \"rua\": \"Rua frei greg\u00f3rio dal monte\",\n \"numeroEndereco\":\"1384\",\n \"cep\":\"0939034\"\n}"},{"id":"482c9f49-1405-221c-60a7-14bf4d4ead6a","name":"localhost:9000\/login","url":"localhost:9000\/login","description":"","data":[],"dataMode":"raw","headerData":[{"key":"Content-Type","value":"application\/json"}],"method":"POST","pathVariableData":[],"queryParams":[],"auth":null,"events":[],"folder":null,"collectionId":"b3e34531-9c02-8777-df5a-47ebdf6716c6","rawModeData":"{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}","headers":"Content-Type: application\/json\n","pathVariables":[],"collection_id":"b3e34531-9c02-8777-df5a-47ebdf6716c6","currentHelper":null,"helperAttributes":null},{"id":"6e2ad341-5e3b-2694-30cd-2ddfab3a1e6f","headers":"Content-Type: application\/json\nX-AUTH-TOKEN: abc123\n","headerData":[{"key":"Content-Type","value":"application\/json","description":"","enabled":true},{"key":"X-AUTH-TOKEN","value":"abc123","description":"","enabled":true}],"url":"{{API_URL_VM2}}\/pessoas\/8","folder":null,"queryParams":[],"events":[],"pathVariables":[],"pathVariableData":[],"method":"DELETE","data":[],"dataMode":"raw","auth":null,"time":1525016651231,"name":"Delete pessoa","description":"","collectionId":"b3e34531-9c02-8777-df5a-47ebdf6716c6","responses":[],"currentHelper":null,"helperAttributes":null,"rawModeData":"{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"},{"id":"879ec714-4c83-78b0-3f4c-a6505f21a130","headers":"X-AUTH-TOKEN: 726144e0-ecee-40e3-8d32-ca12563bb6f2\nContent-Type: application\/json\n","headerData":[{"key":"X-AUTH-TOKEN","value":"726144e0-ecee-40e3-8d32-ca12563bb6f2","description":"","enabled":true},{"key":"Content-Type","value":"application\/json","description":"","enabled":true}],"url":"{{API_URL_VM2}}\/pessoas\/9","folder":null,"queryParams":[],"events":[],"pathVariables":[],"pathVariableData":[],"method":"PUT","data":[],"dataMode":"raw","auth":null,"time":1525018716230,"name":"Update Pessoa ( id )","description":"","collectionId":"b3e34531-9c02-8777-df5a-47ebdf6716c6","responses":[],"currentHelper":null,"helperAttributes":null,"rawModeData":"{\n \"nome\": \"Rodrigo Teixeira\"\n}"},{"id":"9d449671-ea1f-9812-15a0-c4a731ee940c","headers":"Content-Type: application\/json\nX-AUTH-TOKEN: abc123\n","headerData":[{"key":"Content-Type","value":"application\/json","description":"","enabled":true},{"key":"X-AUTH-TOKEN","value":"abc123","description":"","enabled":true}],"url":"{{API_URL_VM2}}\/pessoas","queryParams":[],"pathVariables":[],"pathVariableData":[],"events":[],"auth":null,"method":"GET","collectionId":"b3e34531-9c02-8777-df5a-47ebdf6716c6","data":[],"dataMode":"raw","name":"List pessoas","description":"","descriptionFormat":"html","time":1525015520368,"version":2,"responses":[],"currentHelper":null,"helperAttributes":null,"rawModeData":"{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"},{"id":"fbc8a8d4-a23b-2c0e-89a2-1c57df392290","headers":"Content-Type: application\/json\nX-AUTH-TOKEN: abc123\n","headerData":[{"key":"Content-Type","value":"application\/json","description":"","enabled":true},{"key":"X-AUTH-TOKEN","value":"abc123","description":"","enabled":true}],"url":"{{API_URL_VM2}}\/users","folder":null,"queryParams":[],"events":[],"pathVariables":[],"pathVariableData":[],"method":"GET","data":[],"dataMode":"raw","auth":null,"time":1525015507123,"name":"localhost:9000\/users","description":"","collectionId":"b3e34531-9c02-8777-df5a-47ebdf6716c6","currentHelper":null,"helperAttributes":null,"rawModeData":"{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"}]}
+{
+	"info": {
+		"name": "GeoAll",
+		"_postman_id": "b0492400-4c07-578c-70e2-66f2c5827512",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save pessoa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "726144e0-ecee-40e3-8d32-ca12563bb6f2"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"nome\": \"Rodrigo Teixeira\",\n \"cpf\":\"12345678909\",\n \"estado\": \"sc\",\n \"cidade\": \"Turvo\",\n \"rua\": \"Rua frei gregório dal monte\",\n \"numeroEndereco\":\"1384\",\n \"cep\":\"0939034\"\n}"
+				},
+				"url": {
+					"raw": "http://170.233.183.4:9000/pessoas",
+					"protocol": "http",
+					"host": [
+						"170",
+						"233",
+						"183",
+						"4"
+					],
+					"port": "9000",
+					"path": [
+						"pessoas"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"login"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Pessoa - Upload file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "726144e0-ecee-40e3-8d32-ca12563bb6f2"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{API_URL_VM2}}/pessoas/7/files/upload",
+					"host": [
+						"{{API_URL_VM2}}"
+					],
+					"path": [
+						"pessoas",
+						"7",
+						"files",
+						"upload"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Pessoa ( id )",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "726144e0-ecee-40e3-8d32-ca12563bb6f2"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"nome\": \"Rodrigo Teixeira\"\n}"
+				},
+				"url": {
+					"raw": "{{API_URL_VM2}}/pessoas/9",
+					"host": [
+						"{{API_URL_VM2}}"
+					],
+					"path": [
+						"pessoas",
+						"9"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List pessoas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "abc123"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"
+				},
+				"url": {
+					"raw": "{{API_URL_VM2}}/pessoas?q=rodrigo",
+					"host": [
+						"{{API_URL_VM2}}"
+					],
+					"path": [
+						"pessoas"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "rodrigo",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete pessoa",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "abc123"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"
+				},
+				"url": {
+					"raw": "{{API_URL_VM2}}/pessoas/8",
+					"host": [
+						"{{API_URL_VM2}}"
+					],
+					"path": [
+						"pessoas",
+						"8"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Pessoa ( id) ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "abc123"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"
+				},
+				"url": {
+					"raw": "{{API_URL_VM2}}/pessoas/8",
+					"host": [
+						"{{API_URL_VM2}}"
+					],
+					"path": [
+						"pessoas",
+						"8"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "abc123"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Save user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "87cb9e9d-308d-47d0-a0b4-b033a231bbe5"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"nomeCompleto\": \"Lucas Carlessi\",\n \"email\": \"lucascarlessi@gmail.com\",\n \"senha\":\"123\",\n \"usuarioPerfil\": { \"id\": 1 }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "retrieve user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "1853fa61-1ba1-4a54-af15-ecdf38b8de33"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/users/4",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"4"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "1853fa61-1ba1-4a54-af15-ecdf38b8de33"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"nomeCompleto\": \"rodrigo\",\n \"email\": \"rodrigo@gmail.com\",\n \"senha\":\"123\",\n \"usuarioPerfil\": { \"id\": 3 }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"4"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "1853fa61-1ba1-4a54-af15-ecdf38b8de33"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:9000/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"4"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
