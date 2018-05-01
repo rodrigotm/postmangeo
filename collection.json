@@ -21,15 +21,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n \"nome\": \"Rodrigo Teixeira\",\n \"cpf\":\"12345678909\",\n \"estado\": \"sc\",\n \"cidade\": \"Turvo\",\n \"rua\": \"Rua frei gregório dal monte\",\n \"numeroEndereco\":\"1384\",\n \"cep\":\"0939034\"\n}"
+					"raw": "{\n\t\"inscricaoImobiliaria\":\"9889443\"\n}"
 				},
 				"url": {
-					"raw": "{{API_URL_VM2}}/pessoas",
+					"raw": "{{API_URL_VM2}}/imoveis",
 					"host": [
 						"{{API_URL_VM2}}"
 					],
 					"path": [
-						"pessoas"
+						"imoveis"
 					]
 				}
 			},
@@ -165,7 +165,7 @@
 					"raw": "{\n  \"email\": \"eliel@gmail.com\",\n  \"senha\": \"eliel123\"\n}"
 				},
 				"url": {
-					"raw": "{{API_URL_VM2}}/pessoas?q=rodrigo",
+					"raw": "{{API_URL_VM2}}/pessoas?tipoPessoa=1&q=rodrigo",
 					"host": [
 						"{{API_URL_VM2}}"
 					],
@@ -173,6 +173,11 @@
 						"pessoas"
 					],
 					"query": [
+						{
+							"key": "tipoPessoa",
+							"value": "1",
+							"equals": true
+						},
 						{
 							"key": "q",
 							"value": "rodrigo"
@@ -529,6 +534,75 @@
 						"lotes"
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Imoveis",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "{{TOKEN_VM2}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"eliel@gmail.com\",\n  \"senha\": \"eliel123\"\n}"
+				},
+				"url": {
+					"raw": "{{API_URL_VM2}}/imoveis?q=01011010230",
+					"host": [
+						"{{API_URL_VM2}}"
+					],
+					"path": [
+						"imoveis"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "01011010230",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Save Imovel",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "{{TOKEN_VM2}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"inscricaoImobiliaria\":\"9889443\"\n}"
+				},
+				"url": {
+					"raw": "{{API_URL_VM2}}/imoveis",
+					"host": [
+						"{{API_URL_VM2}}"
+					],
+					"path": [
+						"imoveis"
+					]
+				},
+				"description": ""
 			},
 			"response": []
 		}
