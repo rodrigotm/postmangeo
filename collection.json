@@ -1,8 +1,7 @@
 {
 	"info": {
+		"_postman_id": "506f281f-8bc1-4fde-ba76-7858df0c6c6f",
 		"name": "GeoAll",
-		"_postman_id": "b0492400-4c07-578c-70e2-66f2c5827512",
-		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -32,13 +31,25 @@
 					"path": [
 						"pessoas"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e4ede6a1-4b7d-4b1e-8818-f71a0a499a9b",
+						"type": "text/javascript",
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"TOKEN_VM2\", data.authToken);"
+						]
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -49,7 +60,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"
+					"raw": "{\n\t\"email\": \"lucascarlessi@gmail.com\",\n\t\"senha\": \"123\"\n}"
 				},
 				"url": {
 					"raw": "localhost:9000/login",
@@ -60,8 +71,7 @@
 					"path": [
 						"login"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -101,8 +111,7 @@
 						"files",
 						"upload"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -133,8 +142,7 @@
 						"pessoas",
 						"9"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -167,12 +175,10 @@
 					"query": [
 						{
 							"key": "q",
-							"value": "rodrigo",
-							"equals": true
+							"value": "rodrigo"
 						}
 					]
-				},
-				"description": null
+				}
 			},
 			"response": []
 		},
@@ -203,8 +209,7 @@
 						"pessoas",
 						"8"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -235,8 +240,7 @@
 						"pessoas",
 						"8"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -267,8 +271,7 @@
 					"path": [
 						"users"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -300,8 +303,7 @@
 					"path": [
 						"users"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -333,8 +335,7 @@
 						"users",
 						"4"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -367,8 +368,7 @@
 						"users",
 						"4"
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -386,7 +386,10 @@
 						"value": "application/json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://localhost:9000/users/4",
 					"protocol": "http",
@@ -398,8 +401,134 @@
 						"users",
 						"4"
 					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list perfis",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "{{TOKEN_VM2}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost:9000/perfis",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"perfis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrieve perfil",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "{{TOKEN_VM2}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/perfis/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"perfis",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update perfil",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "{{TOKEN_VM2}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"nome\": \"NAO\",\n\"roles\": []\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/perfis/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"perfis",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list all lotes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "{{TOKEN_VM2}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/lotes",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"lotes"
+					]
+				}
 			},
 			"response": []
 		}
