@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "506f281f-8bc1-4fde-ba76-7858df0c6c6f",
+		"_postman_id": "784bb1e8-1fc9-40d1-b277-2946f1e04151",
 		"name": "GeoAll",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -21,15 +21,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"inscricaoImobiliaria\":\"9889443\"\n}"
+					"raw": "{\n \"nome\": \"Rodrigo Teixeira\",\n \"cpf\":\"12345678909\",\n \"estado\": \"sc\",\n \"cidade\": \"Turvo\",\n \"logradouro\": \"Rua frei gregório dal monte\",\n \"numeroEndereco\":\"1384\",\n \"cep\":\"0939034\"\n}"
 				},
 				"url": {
-					"raw": "{{API_URL_VM2}}/imoveis",
+					"raw": "{{API_URL_VM2}}/pessoas",
 					"host": [
 						"{{API_URL_VM2}}"
 					],
 					"path": [
-						"imoveis"
+						"pessoas"
 					]
 				}
 			},
@@ -175,8 +175,7 @@
 					"query": [
 						{
 							"key": "tipoPessoa",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "q",
@@ -489,7 +488,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"nome\": \"NAO\",\n\"roles\": []\n}"
+					"raw": "{\n\"roles\": [{\"id\": 5}]\n}"
 				},
 				"url": {
 					"raw": "http://localhost:9000/perfis/4",
@@ -501,37 +500,6 @@
 					"path": [
 						"perfis",
 						"4"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "list all lotes",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "X-AUTH-TOKEN",
-						"value": "{{TOKEN_VM2}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"
-				},
-				"url": {
-					"raw": "localhost:9000/lotes",
-					"host": [
-						"localhost"
-					],
-					"port": "9000",
-					"path": [
-						"lotes"
 					]
 				}
 			},
@@ -566,12 +534,10 @@
 					"query": [
 						{
 							"key": "q",
-							"value": "01011010230",
-							"equals": true
+							"value": "01011010230"
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -601,8 +567,70 @@
 					"path": [
 						"imoveis"
 					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find lotes by caracteristicas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "{{TOKEN_VM2}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n\t\"idCaracteristicas\": 10820,\n\t\"caracteristicasFiltros\": {\n\t\t\"condicionalFiltro\" : \">\",\n\t\t\"caracteristicasOpcoesValor\": \"10\"\n\t},\n\t\"tipoValor\": \"N\"\n}]"
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost:9000/lotes/caracteristicas",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"lotes",
+						"caracteristicas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list all lotes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "{{TOKEN_VM2}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"eliel@gmail.com\",\n\t\"senha\": \"eliel123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/lotes",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"lotes"
+					]
+				}
 			},
 			"response": []
 		}
