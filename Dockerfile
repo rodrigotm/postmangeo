@@ -1,4 +1,4 @@
-FROM dockerfile/java
+FROM exoplatform/ubuntu-jdk7
 
 MAINTAINER Rodrigo Teixeira
 
