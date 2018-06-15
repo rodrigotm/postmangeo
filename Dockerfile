@@ -1,4 +1,4 @@
-FROM exoplatform/base-jdk:jdk8
+FROM ubuntu/least
 
 MAINTAINER Rodrigo Teixeira
 
