@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM anapsix/alpine-java:8
 
 MAINTAINER Rodrigo Teixeira
 
