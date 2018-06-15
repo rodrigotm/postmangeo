@@ -1,4 +1,4 @@
-FROM exoplatform/ubuntu-jdk7
+FROM exoplatform/base-jdk:jdk8
 
 MAINTAINER Rodrigo Teixeira
 
